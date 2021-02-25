@@ -6,23 +6,30 @@
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="180">
     <link rel="shortcut icon" href="niomic.ico" />
-    <title>Tugas 37 JS</title>
+    <title>Tugas 36 JS</title>
 </head>
 
 <body>
-    <h2>Login</h2>
-    <p class="department">- Department of Finance -</p>
-    <input type="email" id="email" value="email" /> <br /><br />
-    <input type="username" id="username" value="username" /> <br /><br />
-    <input type="password" class="password" value="password" /> <br /><br />
-    <button type="button" onclick="jalanScript()" name="button">Jalan</button>
+    <button type="button" onclick="tombol()" name="button">Jalankan</button>
+    <br />
+    <br />
+    <hr /> Atribut <b>getNamedItem()</b> :
+    <p id="jwb1">contoh</p>
+    <hr /> Atribut <b>name()</b> :
+    <p id="jwb2">contoh</p>
+    <hr /> Atribut <b>length()</b> :
+    <p id="jwb3">contoh</p>
+    <hr />
+    <script>
+        function tombol() {
+            var button = document.getElementsByTagName('button')[0];
+            var jawab1 = button.attributes.getNamedItem('onclick').value;
+            var jawab2 = button.attributes[0].name;
+            var jawab3 = button.attributes.length;
 
-    <script type="text/javascript">
-        function jalanScript() {
-            console.log(document.getElementById('email'));
-            console.log(document.getElementsByTagName('h2'));
-            console.log(document.getElementsByClassName('password'))
-            console.log(document.querySelector('.department'));
+            document.getElementById("jwb1").innerHTML = jawab1;
+            document.getElementById("jwb2").innerHTML = jawab2;
+            document.getElementById("jwb3").innerHTML = jawab3;
         }
     </script>
 </body>
